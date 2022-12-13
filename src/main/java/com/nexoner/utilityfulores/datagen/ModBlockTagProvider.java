@@ -22,11 +22,11 @@ public class ModBlockTagProvider extends BlockTagsProvider {
         super(pGenerator, UtilityfulOres.MOD_ID, existingFileHelper);
     }
 
-    public static final TagKey<Block> ENDER_ORE = createTag("forge","ores/ender");
+    public static final TagKey<Block> ORE_ENDER = createTag("forge","ores/ender");
 
     @Override
     protected void addTags() {
-        tag(ENDER_ORE).add(ModBlocks.DEEPSLATE_ENDER_ORE.get(),ModBlocks.ENDER_ORE.get());
+        tag(ORE_ENDER).add(ModBlocks.DEEPSLATE_ENDER_ORE.get(),ModBlocks.ENDER_ORE.get());
         tagStandardOres();
     }
 

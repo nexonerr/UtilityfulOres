@@ -21,6 +21,7 @@ public class DataGenerators {
         ModBlockTagProvider blockTagProvider = new ModBlockTagProvider(generator,existingFileHelper);
         generator.addProvider(blockTagProvider);
         generator.addProvider(new ModItemTagProvider(generator,blockTagProvider,existingFileHelper));
+        generator.addProvider(new ModRecipeProvider(generator));
 
 
     }

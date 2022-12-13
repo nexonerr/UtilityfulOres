@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "group": "utilityfulores_compacting",
+  "ingredients": [
+    {
+      "item": "utilityfulores:ender_shard"
+    },
+    {
+      "item": "utilityfulores:ender_shard"
+    },
+    {
+      "item": "utilityfulores:ender_shard"
+    }
+  ],
+  "result": {
+    "item": "minecraft:ender_pearl"
+  }
+}

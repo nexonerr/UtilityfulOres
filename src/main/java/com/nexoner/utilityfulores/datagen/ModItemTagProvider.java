@@ -18,11 +18,11 @@ public class ModItemTagProvider extends ItemTagsProvider {
         super(pGenerator, pBlockTagsProvider, UtilityfulOres.MOD_ID, existingFileHelper);
     }
 
-    public static final TagKey<Item> ENDER_ORE = createTag("forge","ores/ender");
+    public static final TagKey<Item> ORE_ENDER = createTag("forge","ores/ender");
 
     @Override
     protected void addTags() {
-        copy(ModBlockTagProvider.ENDER_ORE,ENDER_ORE);
+        copy(ModBlockTagProvider.ORE_ENDER, ORE_ENDER);
     }
 
     @Override
