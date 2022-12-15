@@ -22,6 +22,10 @@ public class ModBlocks {
 
     public static final StoneVarientedOre BLAZE_ORE = new StoneVarientedOre("blaze_ore");
 
+    public static final StoneVarientedOre SLIME_ORE = new StoneVarientedOre("slime_ore",2,4);
+
+    public static final StoneVarientedOre BONESTRUCK_ORE = new StoneVarientedOre("bonestruck_ore",2,4);
+
 
     public static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block, CreativeModeTab tab) {
         RegistryObject<T> toReturn = BLOCKS.register(name, block);

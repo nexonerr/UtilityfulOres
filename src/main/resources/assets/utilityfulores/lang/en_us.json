@@ -1,8 +1,12 @@
 {
   "block.utilityfulores.blaze_ore": "Blaze Ore",
+  "block.utilityfulores.bonestruck_ore": "Bonestruck Ore",
   "block.utilityfulores.deepslate_blaze_ore": "Deepslate Blaze Ore",
+  "block.utilityfulores.deepslate_bonestruck_ore": "Deepslate Bonestruck Ore",
   "block.utilityfulores.deepslate_ender_ore": "Deepslate Ender Ore",
+  "block.utilityfulores.deepslate_slime_ore": "Deepslate Slime Ore",
   "block.utilityfulores.ender_ore": "Ender Ore",
+  "block.utilityfulores.slime_ore": "Slime Ore",
   "item.utilityfulores.ender_shard": "Ender Shard",
   "itemGroup.utilityfulorestab": "Utilityful Ores"
 }

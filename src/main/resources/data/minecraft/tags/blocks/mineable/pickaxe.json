@@ -4,6 +4,10 @@
     "utilityfulores:ender_ore",
     "utilityfulores:deepslate_ender_ore",
     "utilityfulores:blaze_ore",
-    "utilityfulores:deepslate_blaze_ore"
+    "utilityfulores:deepslate_blaze_ore",
+    "utilityfulores:slime_ore",
+    "utilityfulores:deepslate_slime_ore",
+    "utilityfulores:bonestruck_ore",
+    "utilityfulores:deepslate_bonestruck_ore"
   ]
 }

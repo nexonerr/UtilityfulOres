@@ -14,6 +14,8 @@ public class ModOreGeneration {
 
         base.add(ConfiguredPlacedFeatures.ENDER_ORE.PLACED);
         base.add(ConfiguredPlacedFeatures.BLAZE_ORE.PLACED);
+        base.add(ConfiguredPlacedFeatures.SLIME_ORE.PLACED);
+        base.add(ConfiguredPlacedFeatures.BONESTRUCK_ORE.PLACED);
 
     }
 }

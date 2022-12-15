@@ -25,11 +25,15 @@ public class ModBlockTagProvider extends BlockTagsProvider {
 
     public static final TagKey<Block> ORE_ENDER = createTag("forge","ores/ender");
     public static final TagKey<Block> ORE_BLAZE = createTag("forge","ores/blaze");
+    public static final TagKey<Block> ORE_SLIME = createTag("forge","ores/slime");
+    public static final TagKey<Block> ORE_BONE = createTag("forge","ores/bone");
 
     @Override
     protected void addTags() {
         tagStoneVarientedOre(ModBlocks.ENDER_ORE,ORE_ENDER);
         tagStoneVarientedOre(ModBlocks.BLAZE_ORE,ORE_BLAZE);
+        tagStoneVarientedOre(ModBlocks.SLIME_ORE,ORE_SLIME);
+        tagStoneVarientedOre(ModBlocks.BONESTRUCK_ORE,ORE_BONE);
         tagStandardOres();
     }
 
@@ -39,7 +43,11 @@ public class ModBlockTagProvider extends BlockTagsProvider {
                 ModBlocks.ENDER_ORE.STONE_VARIENT.get(),
                 ModBlocks.ENDER_ORE.DEEPSLATE_VARIENT.get(),
                 ModBlocks.BLAZE_ORE.STONE_VARIENT.get(),
-                ModBlocks.BLAZE_ORE.DEEPSLATE_VARIENT.get()
+                ModBlocks.BLAZE_ORE.DEEPSLATE_VARIENT.get(),
+                ModBlocks.SLIME_ORE.STONE_VARIENT.get(),
+                ModBlocks.SLIME_ORE.DEEPSLATE_VARIENT.get(),
+                ModBlocks.BONESTRUCK_ORE.STONE_VARIENT.get(),
+                ModBlocks.BONESTRUCK_ORE.DEEPSLATE_VARIENT.get()
         );
         for (Block block: standardOres) {
             tag(BlockTags.MINEABLE_WITH_PICKAXE).add(block);

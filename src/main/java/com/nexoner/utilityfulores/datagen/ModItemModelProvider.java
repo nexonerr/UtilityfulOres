@@ -30,6 +30,8 @@ public class ModItemModelProvider extends ItemModelProvider {
     private void registerBlockItems(){
         stoneVarientedOreBlockItem(ModBlocks.ENDER_ORE);
         stoneVarientedOreBlockItem(ModBlocks.BLAZE_ORE);
+        stoneVarientedOreBlockItem(ModBlocks.SLIME_ORE);
+        stoneVarientedOreBlockItem(ModBlocks.BONESTRUCK_ORE);
     }
 
     private ItemModelBuilder simpleItem(Item item) {

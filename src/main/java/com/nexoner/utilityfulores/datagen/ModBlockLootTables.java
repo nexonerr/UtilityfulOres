@@ -30,8 +30,15 @@ public class ModBlockLootTables extends BlockLoot {
         this.add(ModBlocks.ENDER_ORE.STONE_VARIENT.get(), (block) -> createOreDrop(ModBlocks.ENDER_ORE.STONE_VARIENT.get(), ModItems.ENDER_SHARD.get()));
         this.add(ModBlocks.ENDER_ORE.DEEPSLATE_VARIENT.get(), (block) -> createOreDrop(ModBlocks.ENDER_ORE.DEEPSLATE_VARIENT.get(), ModItems.ENDER_SHARD.get()));
 
-        createAmplifiedDustDrop(ModBlocks.BLAZE_ORE.STONE_VARIENT.get(), Items.BLAZE_POWDER,Items.BLAZE_ROD);
-        createAmplifiedDustDrop(ModBlocks.BLAZE_ORE.DEEPSLATE_VARIENT.get(), Items.BLAZE_POWDER,Items.BLAZE_ROD);
+        this.add(ModBlocks.BLAZE_ORE.STONE_VARIENT.get(), (block) -> createAmplifiedDustDrop(ModBlocks.BLAZE_ORE.STONE_VARIENT.get(), Items.BLAZE_POWDER,Items.BLAZE_ROD));
+        this.add(ModBlocks.BLAZE_ORE.DEEPSLATE_VARIENT.get(), (block) -> createAmplifiedDustDrop(ModBlocks.BLAZE_ORE.DEEPSLATE_VARIENT.get(), Items.BLAZE_POWDER,Items.BLAZE_ROD));
+
+        this.add(ModBlocks.SLIME_ORE.STONE_VARIENT.get(), (block) -> createMultipliedOreDrop(ModBlocks.SLIME_ORE.STONE_VARIENT.get(), Items.SLIME_BALL,2.0f,2.0f));
+        this.add(ModBlocks.SLIME_ORE.DEEPSLATE_VARIENT.get(), (block) -> createMultipliedOreDrop(ModBlocks.SLIME_ORE.DEEPSLATE_VARIENT.get(), Items.SLIME_BALL,2.0f,2.0f));
+
+        this.add(ModBlocks.BONESTRUCK_ORE.STONE_VARIENT.get(), (block) -> createMultipliedOreDrop(ModBlocks.BONESTRUCK_ORE.STONE_VARIENT.get(), Items.BONE,1.0f,3.0f));
+        this.add(ModBlocks.BONESTRUCK_ORE.DEEPSLATE_VARIENT.get(), (block) -> createMultipliedOreDrop(ModBlocks.BONESTRUCK_ORE.DEEPSLATE_VARIENT.get(), Items.BONE,1.0f,3.0f));
+
     }
 
     @Override
@@ -39,14 +46,21 @@ public class ModBlockLootTables extends BlockLoot {
         return ModBlocks.BLOCKS.getEntries().stream().map(RegistryObject::get)::iterator;
     }
 
-    private void createAmplifiedDustDrop(Block pBlock, ItemLike pItem, ItemLike pItemAlt) {
-        this.add(pBlock, applyExplosionDecay(pBlock, LootTable.lootTable()
+    //Method
+    private LootTable.Builder createAmplifiedDustDrop(Block pBlock, ItemLike pItem, ItemLike pItemAlt) {
+        return applyExplosionDecay(pBlock, LootTable.lootTable()
                 .withPool(LootPool.lootPool().setRolls(UniformGenerator.between(1.0f,3.0f))
                         .add(LootItem.lootTableItem(pItem).apply(SetItemCountFunction.setCount(UniformGenerator.between(1.0f,2.0f))).apply(ApplyBonusCount.addOreBonusCount(Enchantments.BLOCK_FORTUNE)).setWeight(2))
                         .add(LootItem.lootTableItem(pItemAlt).apply(ApplyBonusCount.addOreBonusCount(Enchantments.BLOCK_FORTUNE)).setWeight(1)).when(HAS_NO_SILK_TOUCH)
                 )
                 .withPool(LootPool.lootPool().add(LootItem.lootTableItem(pBlock)).when(HAS_SILK_TOUCH))
-        ));
+        );
+    }
+
+
+
+    private LootTable.Builder createMultipliedOreDrop(Block pBlock, ItemLike pItem, float min, float max){
+        return createSilkTouchDispatchTable(pBlock, applyExplosionDecay(pBlock, LootItem.lootTableItem(pItem).apply(SetItemCountFunction.setCount(UniformGenerator.between(min,max))).apply(ApplyBonusCount.addOreBonusCount(Enchantments.BLOCK_FORTUNE))));
     }
 
 

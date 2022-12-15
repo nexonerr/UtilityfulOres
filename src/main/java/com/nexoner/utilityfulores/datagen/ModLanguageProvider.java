@@ -28,6 +28,8 @@ public class ModLanguageProvider extends LanguageProvider {
     private void Blocks(){
         translateStoneVarientedOre(ModBlocks.ENDER_ORE,"Ender Ore");
         translateStoneVarientedOre(ModBlocks.BLAZE_ORE, "Blaze Ore");
+        translateStoneVarientedOre(ModBlocks.SLIME_ORE, "Slime Ore");
+        translateStoneVarientedOre(ModBlocks.BONESTRUCK_ORE, "Bonestruck Ore");
     }
 
     private void addCreativeModeTab(CreativeModeTab key, String translation){

@@ -1,5 +1,6 @@
 package com.nexoner.utilityfulores.world.gen;
 
+import com.nexoner.utilityfulores.block.util.StoneVarientedOre;
 import com.nexoner.utilityfulores.config.StandardOreConfig;
 import net.minecraft.core.Holder;
 import net.minecraft.data.worldgen.features.FeatureUtils;
@@ -41,6 +42,10 @@ public class BundledConfiguredPlacedFeature {
     public BundledConfiguredPlacedFeature(StandardOreConfig oreConfig,List<OreConfiguration.TargetBlockState> targetBlocks){
          this(oreConfig.id,targetBlocks,oreConfig.VEIN_SIZE.get(),oreConfig.IS_RARE.get(),oreConfig.SPAWN_MAX.get(),oreConfig.SPAWN_MIN.get(),oreConfig.SPAWN_RATE.get());
     }
+
+    /*public BundledConfiguredPlacedFeature(StandardOreConfig oreConfig, StoneVarientedOre stoneVarientedOre){
+        this(oreConfig, ConfiguredPlacedFeatures.listizeStoneVarientedOre(stoneVarientedOre));
+    }*/
 
     public static List<PlacementModifier> orePlacement(PlacementModifier p_195347_, PlacementModifier p_195348_) {
         return List.of(p_195347_, InSquarePlacement.spread(), p_195348_, BiomeFilter.biome());

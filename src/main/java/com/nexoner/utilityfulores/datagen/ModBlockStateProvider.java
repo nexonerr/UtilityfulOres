@@ -16,6 +16,8 @@ public class ModBlockStateProvider extends BlockStateProvider {
     protected void registerStatesAndModels() {
         registerStoneVarientedOreModels(ModBlocks.ENDER_ORE);
         registerStoneVarientedOreModels(ModBlocks.BLAZE_ORE);
+        registerStoneVarientedOreModels(ModBlocks.SLIME_ORE);
+        registerStoneVarientedOreModels(ModBlocks.BONESTRUCK_ORE);
     }
 
     private void registerStoneVarientedOreModels(StoneVarientedOre stoneVarientedOre){
