@@ -2,6 +2,7 @@ package com.nexoner.utilityfulores.datagen;
 
 import com.nexoner.utilityfulores.UtilityfulOres;
 import com.nexoner.utilityfulores.block.ModBlocks;
+import com.nexoner.utilityfulores.block.util.StoneVarientedOre;
 import com.nexoner.utilityfulores.creative_tab.ModCreativeModeTab;
 import com.nexoner.utilityfulores.item.ModItems;
 import net.minecraft.data.DataGenerator;
@@ -25,11 +26,16 @@ public class ModLanguageProvider extends LanguageProvider {
     }
 
     private void Blocks(){
-        add(ModBlocks.ENDER_ORE.get(),"Ender Ore");
-        add(ModBlocks.DEEPSLATE_ENDER_ORE.get(),"Deepslate Ender Ore");
+        translateStoneVarientedOre(ModBlocks.ENDER_ORE,"Ender Ore");
+        translateStoneVarientedOre(ModBlocks.BLAZE_ORE, "Blaze Ore");
     }
 
     private void addCreativeModeTab(CreativeModeTab key, String translation){
         add(key.getDisplayName().getString(), translation);
+    }
+
+    private void translateStoneVarientedOre(StoneVarientedOre stoneVarientedOre, String translation){
+        add(stoneVarientedOre.STONE_VARIENT.get(),translation);
+        add(stoneVarientedOre.DEEPSLATE_VARIENT.get(),"Deepslate " + translation);
     }
 }

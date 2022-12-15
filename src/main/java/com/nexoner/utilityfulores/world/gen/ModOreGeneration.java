@@ -13,6 +13,7 @@ public class ModOreGeneration {
                 event.getGeneration().getFeatures(GenerationStep.Decoration.UNDERGROUND_ORES);
 
         base.add(ConfiguredPlacedFeatures.ENDER_ORE.PLACED);
+        base.add(ConfiguredPlacedFeatures.BLAZE_ORE.PLACED);
 
     }
 }

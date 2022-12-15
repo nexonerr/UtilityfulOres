@@ -1,7 +1,7 @@
 {
   "replace": false,
   "values": [
-    "utilityfulores:deepslate_ender_ore",
-    "utilityfulores:ender_ore"
+    "utilityfulores:ender_ore",
+    "utilityfulores:deepslate_ender_ore"
   ]
 }

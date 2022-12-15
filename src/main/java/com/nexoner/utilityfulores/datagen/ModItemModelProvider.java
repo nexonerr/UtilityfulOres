@@ -2,6 +2,7 @@ package com.nexoner.utilityfulores.datagen;
 
 import com.nexoner.utilityfulores.UtilityfulOres;
 import com.nexoner.utilityfulores.block.ModBlocks;
+import com.nexoner.utilityfulores.block.util.StoneVarientedOre;
 import com.nexoner.utilityfulores.item.ModItems;
 import net.minecraft.data.DataGenerator;
 import net.minecraft.resources.ResourceLocation;
@@ -27,8 +28,8 @@ public class ModItemModelProvider extends ItemModelProvider {
     }
 
     private void registerBlockItems(){
-        simpleBlockItem(ModBlocks.ENDER_ORE.get());
-        simpleBlockItem(ModBlocks.DEEPSLATE_ENDER_ORE.get());
+        stoneVarientedOreBlockItem(ModBlocks.ENDER_ORE);
+        stoneVarientedOreBlockItem(ModBlocks.BLAZE_ORE);
     }
 
     private ItemModelBuilder simpleItem(Item item) {
@@ -45,5 +46,10 @@ public class ModItemModelProvider extends ItemModelProvider {
     private ItemModelBuilder simpleBlockItem(Block block) {
         return cubeAll(block.getRegistryName().getPath(), new ResourceLocation(UtilityfulOres.MOD_ID,
                 "block/" + block.getRegistryName().getPath()));
+    }
+
+    private void stoneVarientedOreBlockItem(StoneVarientedOre stoneVarientedOre){
+        simpleBlockItem(stoneVarientedOre.STONE_VARIENT.get());
+        simpleBlockItem(stoneVarientedOre.DEEPSLATE_VARIENT.get());
     }
 }

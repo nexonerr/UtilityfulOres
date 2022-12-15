@@ -1,5 +1,6 @@
 package com.nexoner.utilityfulores.world.gen;
 
+import com.nexoner.utilityfulores.config.StandardOreConfig;
 import net.minecraft.core.Holder;
 import net.minecraft.data.worldgen.features.FeatureUtils;
 import net.minecraft.data.worldgen.placement.PlacementUtils;
@@ -36,6 +37,9 @@ public class BundledConfiguredPlacedFeature {
                     CONFIGURED, rareOrePlacement(spawnRate, // Every x chunks
                             HeightRangePlacement.triangle(VerticalAnchor.absolute(minSpawn), VerticalAnchor.absolute(maxSpawn))));
         }
+    }
+    public BundledConfiguredPlacedFeature(StandardOreConfig oreConfig,List<OreConfiguration.TargetBlockState> targetBlocks){
+         this(oreConfig.id,targetBlocks,oreConfig.VEIN_SIZE.get(),oreConfig.IS_RARE.get(),oreConfig.SPAWN_MAX.get(),oreConfig.SPAWN_MIN.get(),oreConfig.SPAWN_RATE.get());
     }
 
     public static List<PlacementModifier> orePlacement(PlacementModifier p_195347_, PlacementModifier p_195348_) {

@@ -19,10 +19,12 @@ public class ModItemTagProvider extends ItemTagsProvider {
     }
 
     public static final TagKey<Item> ORE_ENDER = createTag("forge","ores/ender");
+    public static final TagKey<Item> ORE_BLAZE = createTag("forge","ores/blaze");
 
     @Override
     protected void addTags() {
         copy(ModBlockTagProvider.ORE_ENDER, ORE_ENDER);
+        copy(ModBlockTagProvider.ORE_BLAZE, ORE_BLAZE);
     }
 
     @Override

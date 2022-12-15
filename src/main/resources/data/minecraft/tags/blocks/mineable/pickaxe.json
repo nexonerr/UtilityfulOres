@@ -2,6 +2,8 @@
   "replace": false,
   "values": [
     "utilityfulores:ender_ore",
-    "utilityfulores:deepslate_ender_ore"
+    "utilityfulores:deepslate_ender_ore",
+    "utilityfulores:blaze_ore",
+    "utilityfulores:deepslate_blaze_ore"
   ]
 }
