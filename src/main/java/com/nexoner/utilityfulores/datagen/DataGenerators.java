@@ -22,6 +22,7 @@ public class DataGenerators {
         generator.addProvider(blockTagProvider);
         generator.addProvider(new ModItemTagProvider(generator,blockTagProvider,existingFileHelper));
         generator.addProvider(new ModRecipeProvider(generator));
+        generator.addProvider(new ModSoundProvider(generator,existingFileHelper));
 
 
     }

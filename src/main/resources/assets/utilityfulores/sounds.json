@@ -1,0 +1,8 @@
+{
+  "miner_grace_break": {
+    "subtitle": "sound.utilityfulores.miner_grace_break",
+    "sounds": [
+      "utilityfulores:miner_grace_break"
+    ]
+  }
+}

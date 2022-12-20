@@ -32,6 +32,8 @@ public class ModItemModelProvider extends ItemModelProvider {
         stoneVarientedOreBlockItem(ModBlocks.BLAZE_ORE);
         stoneVarientedOreBlockItem(ModBlocks.SLIME_ORE);
         stoneVarientedOreBlockItem(ModBlocks.BONESTRUCK_ORE);
+        stoneVarientedOreBlockItem(ModBlocks.SPIDER_ORE);
+        stoneVarientedOreBlockItem(ModBlocks.GRACEFUL_MINER_ORE);
     }
 
     private ItemModelBuilder simpleItem(Item item) {

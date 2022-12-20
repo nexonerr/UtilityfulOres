@@ -2,6 +2,7 @@ package com.nexoner.utilityfulores.datagen;
 
 import com.nexoner.utilityfulores.block.ModBlocks;
 import com.nexoner.utilityfulores.item.ModItems;
+import com.nexoner.utilityfulores.sound.ModSounds;
 import net.minecraft.advancements.critereon.EnchantmentPredicate;
 import net.minecraft.advancements.critereon.ItemPredicate;
 import net.minecraft.advancements.critereon.MinMaxBounds;
@@ -14,6 +15,7 @@ import net.minecraft.world.level.storage.loot.LootPool;
 import net.minecraft.world.level.storage.loot.LootTable;
 import net.minecraft.world.level.storage.loot.entries.LootItem;
 import net.minecraft.world.level.storage.loot.functions.ApplyBonusCount;
+import net.minecraft.world.level.storage.loot.functions.EnchantRandomlyFunction;
 import net.minecraft.world.level.storage.loot.functions.SetItemCountFunction;
 import net.minecraft.world.level.storage.loot.predicates.LootItemCondition;
 import net.minecraft.world.level.storage.loot.predicates.MatchTool;
@@ -38,6 +40,27 @@ public class ModBlockLootTables extends BlockLoot {
 
         this.add(ModBlocks.BONESTRUCK_ORE.STONE_VARIENT.get(), (block) -> createMultipliedOreDrop(ModBlocks.BONESTRUCK_ORE.STONE_VARIENT.get(), Items.BONE,1.0f,3.0f));
         this.add(ModBlocks.BONESTRUCK_ORE.DEEPSLATE_VARIENT.get(), (block) -> createMultipliedOreDrop(ModBlocks.BONESTRUCK_ORE.DEEPSLATE_VARIENT.get(), Items.BONE,1.0f,3.0f));
+
+        this.add(ModBlocks.SPIDER_ORE.STONE_VARIENT.get(), (block) -> createAmplifiedDustDrop(ModBlocks.SPIDER_ORE.STONE_VARIENT.get(), Items.STRING,Items.SPIDER_EYE));
+        this.add(ModBlocks.SPIDER_ORE.DEEPSLATE_VARIENT.get(), (block) -> createAmplifiedDustDrop(ModBlocks.SPIDER_ORE.DEEPSLATE_VARIENT.get(), Items.STRING,Items.SPIDER_EYE));
+
+        this.add(ModBlocks.GRACEFUL_MINER_ORE.STONE_VARIENT.get(), applyExplosionDecay(ModBlocks.GRACEFUL_MINER_ORE.STONE_VARIENT.get(), LootTable.lootTable()
+                .withPool(LootPool.lootPool().setRolls(UniformGenerator.between(1.0f,2.0f)).apply(ApplyBonusCount.addOreBonusCount(Enchantments.BLOCK_FORTUNE))
+                        .add(LootItem.lootTableItem(Items.DIAMOND_PICKAXE).apply(new EnchantRandomlyFunction.Builder().withEnchantment(Enchantments.BLOCK_FORTUNE).withEnchantment(Enchantments.BLOCK_EFFICIENCY)).setWeight(1))
+                        .add(LootItem.lootTableItem(Items.IRON_PICKAXE).apply(new EnchantRandomlyFunction.Builder().withEnchantment(Enchantments.BLOCK_FORTUNE).withEnchantment(Enchantments.BLOCK_EFFICIENCY)).setWeight(3))
+                        .add(LootItem.lootTableItem(Items.TORCH).apply(SetItemCountFunction.setCount(UniformGenerator.between(32f,64f))).setWeight(4)).when(HAS_NO_SILK_TOUCH)
+                )
+                .withPool(LootPool.lootPool().add(LootItem.lootTableItem(ModBlocks.GRACEFUL_MINER_ORE.STONE_VARIENT.get())).when(HAS_SILK_TOUCH))
+        ));
+
+        this.add(ModBlocks.GRACEFUL_MINER_ORE.DEEPSLATE_VARIENT.get(), applyExplosionDecay(ModBlocks.GRACEFUL_MINER_ORE.DEEPSLATE_VARIENT.get(), LootTable.lootTable()
+                .withPool(LootPool.lootPool().setRolls(UniformGenerator.between(1.0f,2.0f)).apply(ApplyBonusCount.addOreBonusCount(Enchantments.BLOCK_FORTUNE))
+                        .add(LootItem.lootTableItem(Items.DIAMOND_PICKAXE).apply(new EnchantRandomlyFunction.Builder().withEnchantment(Enchantments.BLOCK_FORTUNE).withEnchantment(Enchantments.BLOCK_EFFICIENCY)).setWeight(1))
+                        .add(LootItem.lootTableItem(Items.IRON_PICKAXE).apply(new EnchantRandomlyFunction.Builder().withEnchantment(Enchantments.BLOCK_FORTUNE).withEnchantment(Enchantments.BLOCK_EFFICIENCY)).setWeight(3))
+                        .add(LootItem.lootTableItem(Items.TORCH).apply(SetItemCountFunction.setCount(UniformGenerator.between(32f,64f))).setWeight(4)).when(HAS_NO_SILK_TOUCH)
+                )
+                .withPool(LootPool.lootPool().add(LootItem.lootTableItem(ModBlocks.GRACEFUL_MINER_ORE.DEEPSLATE_VARIENT.get())).when(HAS_SILK_TOUCH))
+        ));
 
     }
 

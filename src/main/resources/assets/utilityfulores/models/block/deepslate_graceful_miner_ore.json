@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/cube_all",
+  "textures": {
+    "all": "utilityfulores:block/deepslate_graceful_miner_ore"
+  }
+}

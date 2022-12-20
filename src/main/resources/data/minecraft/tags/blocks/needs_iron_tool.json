@@ -8,6 +8,10 @@
     "utilityfulores:slime_ore",
     "utilityfulores:deepslate_slime_ore",
     "utilityfulores:bonestruck_ore",
-    "utilityfulores:deepslate_bonestruck_ore"
+    "utilityfulores:deepslate_bonestruck_ore",
+    "utilityfulores:spider_ore",
+    "utilityfulores:deepslate_spider_ore",
+    "utilityfulores:graceful_miner_ore",
+    "utilityfulores:deepslate_graceful_miner_ore"
   ]
 }

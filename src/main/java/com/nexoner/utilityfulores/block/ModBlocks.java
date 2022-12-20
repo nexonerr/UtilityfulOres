@@ -1,12 +1,16 @@
 package com.nexoner.utilityfulores.block;
 
 import com.nexoner.utilityfulores.UtilityfulOres;
+import com.nexoner.utilityfulores.block.custom.GracefulMinerOreBlock;
 import com.nexoner.utilityfulores.block.util.StoneVarientedOre;
+import com.nexoner.utilityfulores.creative_tab.ModCreativeModeTab;
 import com.nexoner.utilityfulores.item.ModItems;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.state.BlockBehaviour;
+import net.minecraft.world.level.material.Material;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
@@ -25,6 +29,13 @@ public class ModBlocks {
     public static final StoneVarientedOre SLIME_ORE = new StoneVarientedOre("slime_ore",2,4);
 
     public static final StoneVarientedOre BONESTRUCK_ORE = new StoneVarientedOre("bonestruck_ore",2,4);
+
+    public static final StoneVarientedOre SPIDER_ORE = new StoneVarientedOre("spider_ore",2,4);
+
+    public static final StoneVarientedOre GRACEFUL_MINER_ORE = new StoneVarientedOre(
+            ModBlocks.registerBlock("graceful_miner_ore", () -> new GracefulMinerOreBlock(BlockBehaviour.Properties.of(Material.STONE).strength(3f).requiresCorrectToolForDrops()), ModCreativeModeTab.ORES_TAB),
+            ModBlocks.registerBlock("deepslate_graceful_miner_ore", () -> new GracefulMinerOreBlock(BlockBehaviour.Properties.of(Material.STONE).strength(4f).requiresCorrectToolForDrops()), ModCreativeModeTab.ORES_TAB)
+            );
 
 
     public static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block, CreativeModeTab tab) {

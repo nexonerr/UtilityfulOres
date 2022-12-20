@@ -3,6 +3,7 @@ package com.nexoner.utilityfulores.block.util;
 import com.nexoner.utilityfulores.block.ModBlocks;
 import com.nexoner.utilityfulores.creative_tab.ModCreativeModeTab;
 import net.minecraft.util.valueproviders.UniformInt;
+import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.OreBlock;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.material.Material;
@@ -12,6 +13,11 @@ public class StoneVarientedOre {
 
     public final RegistryObject<OreBlock> STONE_VARIENT;
     public final RegistryObject<OreBlock> DEEPSLATE_VARIENT;
+
+    public StoneVarientedOre (RegistryObject<OreBlock> stoneVarient, RegistryObject<OreBlock> deepslateVarient){
+        this.STONE_VARIENT = stoneVarient;
+        this.DEEPSLATE_VARIENT = deepslateVarient;
+    }
 
     public StoneVarientedOre(String id, float strengthMultiplier, UniformInt xpDrop) {
         STONE_VARIENT = ModBlocks.registerBlock(id,

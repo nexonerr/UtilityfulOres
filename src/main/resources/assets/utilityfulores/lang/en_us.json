@@ -4,9 +4,14 @@
   "block.utilityfulores.deepslate_blaze_ore": "Deepslate Blaze Ore",
   "block.utilityfulores.deepslate_bonestruck_ore": "Deepslate Bonestruck Ore",
   "block.utilityfulores.deepslate_ender_ore": "Deepslate Ender Ore",
+  "block.utilityfulores.deepslate_graceful_miner_ore": "Deepslate Graceful Miner's Ore",
   "block.utilityfulores.deepslate_slime_ore": "Deepslate Slime Ore",
+  "block.utilityfulores.deepslate_spider_ore": "Deepslate Spider Ore",
   "block.utilityfulores.ender_ore": "Ender Ore",
+  "block.utilityfulores.graceful_miner_ore": "Graceful Miner's Ore",
   "block.utilityfulores.slime_ore": "Slime Ore",
+  "block.utilityfulores.spider_ore": "Spider Ore",
   "item.utilityfulores.ender_shard": "Ender Shard",
-  "itemGroup.utilityfulorestab": "Utilityful Ores"
+  "itemGroup.utilityfulorestab": "Utilityful Ores",
+  "sound.utilityfulores.miner_grace_break": "Graceful Miner's Ore is activated"
 }

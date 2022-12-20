@@ -22,6 +22,7 @@ public class ModItemTagProvider extends ItemTagsProvider {
     public static final TagKey<Item> ORE_BLAZE = createTag("forge","ores/blaze");
     public static final TagKey<Item> ORE_SLIME = createTag("forge","ores/slime");
     public static final TagKey<Item> ORE_BONE = createTag("forge","ores/bone");
+    public static final TagKey<Item> ORE_SPIDER = createTag("forge","ores/spider");
 
     @Override
     protected void addTags() {
@@ -29,6 +30,7 @@ public class ModItemTagProvider extends ItemTagsProvider {
         copy(ModBlockTagProvider.ORE_BLAZE, ORE_BLAZE);
         copy(ModBlockTagProvider.ORE_SLIME, ORE_SLIME);
         copy(ModBlockTagProvider.ORE_BONE, ORE_BONE);
+        copy(ModBlockTagProvider.ORE_SPIDER, ORE_SPIDER);
     }
 
     @Override
