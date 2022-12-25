@@ -1,0 +1,34 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "minecraft:shulker_shell"
+    ]
+  },
+  "criteria": {
+    "has_shulker_shard": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "utilityfulores:shulker_shard"
+            ]
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "minecraft:shulker_shell"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has_shulker_shard",
+      "has_the_recipe"
+    ]
+  ]
+}

@@ -19,7 +19,7 @@ apply plugin: 'net.minecraftforge.gradle'
 apply plugin: 'org.parchmentmc.librarian.forgegradle'
 
 
-version = '0.0.1'
+version = '0.1'
 group = 'com.nexoner.utilityfulores' // http://maven.apache.org/guides/mini/guide-naming-conventions.html
 archivesBaseName = 'utilityfulores'
 

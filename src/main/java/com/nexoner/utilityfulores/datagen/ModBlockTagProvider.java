@@ -14,6 +14,7 @@ import org.jetbrains.annotations.Nullable;
 
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.List;
 
 public class ModBlockTagProvider extends BlockTagsProvider {
 
@@ -28,6 +29,8 @@ public class ModBlockTagProvider extends BlockTagsProvider {
     public static final TagKey<Block> ORE_SLIME = createTag("forge","ores/slime");
     public static final TagKey<Block> ORE_BONE = createTag("forge","ores/bone");
     public static final TagKey<Block> ORE_SPIDER = createTag("forge","ores/spider");
+    public static final TagKey<Block> ORE_SULFUR = createTag("forge","ores/sulfur");
+    public static final TagKey<Block> ORE_SHULKER = createTag("forge","ores/shulker");
 
     @Override
     protected void addTags() {
@@ -36,24 +39,25 @@ public class ModBlockTagProvider extends BlockTagsProvider {
         tagStoneVarientedOre(ModBlocks.SLIME_ORE,ORE_SLIME);
         tagStoneVarientedOre(ModBlocks.BONESTRUCK_ORE,ORE_BONE);
         tagStoneVarientedOre(ModBlocks.SPIDER_ORE,ORE_SPIDER);
+        tagStoneVarientedOre(ModBlocks.SULFURIC_ORE,ORE_SULFUR);
+        tagStoneVarientedOre(ModBlocks.SHARDED_SKULKER_ORE,ORE_SHULKER);
         tagStandardOres();
     }
 
     private void tagStandardOres(){
         //define all standard ores here
         setStandardOres(
-                ModBlocks.ENDER_ORE.STONE_VARIENT.get(),
-                ModBlocks.ENDER_ORE.DEEPSLATE_VARIENT.get(),
-                ModBlocks.BLAZE_ORE.STONE_VARIENT.get(),
-                ModBlocks.BLAZE_ORE.DEEPSLATE_VARIENT.get(),
-                ModBlocks.SLIME_ORE.STONE_VARIENT.get(),
-                ModBlocks.SLIME_ORE.DEEPSLATE_VARIENT.get(),
-                ModBlocks.BONESTRUCK_ORE.STONE_VARIENT.get(),
-                ModBlocks.BONESTRUCK_ORE.DEEPSLATE_VARIENT.get(),
-                ModBlocks.SPIDER_ORE.STONE_VARIENT.get(),
-                ModBlocks.SPIDER_ORE.DEEPSLATE_VARIENT.get(),
-                ModBlocks.GRACEFUL_MINER_ORE.STONE_VARIENT.get(),
-                ModBlocks.GRACEFUL_MINER_ORE.DEEPSLATE_VARIENT.get()
+
+        );
+        setStandardStoneVarientedOres(
+                ModBlocks.ENDER_ORE,
+                ModBlocks.BLAZE_ORE,
+                ModBlocks.SLIME_ORE,
+                ModBlocks.BONESTRUCK_ORE,
+                ModBlocks.SPIDER_ORE,
+                ModBlocks.GRACEFUL_MINER_ORE,
+                ModBlocks.SULFURIC_ORE,
+                ModBlocks.SHARDED_SKULKER_ORE
         );
         for (Block block: standardOres) {
             tag(BlockTags.MINEABLE_WITH_PICKAXE).add(block);
@@ -63,6 +67,15 @@ public class ModBlockTagProvider extends BlockTagsProvider {
 
     private void setStandardOres(Block... toAdd){
         standardOres.addAll(Arrays.asList(toAdd));
+    }
+
+    private void setStandardStoneVarientedOres(StoneVarientedOre... toAdd){
+        List<StoneVarientedOre> list = Arrays.asList(toAdd);
+
+        for (StoneVarientedOre stoneVarientedOre: list){
+            standardOres.add(stoneVarientedOre.STONE_VARIENT.get());
+            standardOres.add(stoneVarientedOre.DEEPSLATE_VARIENT.get());
+        }
     }
 
     public static TagKey<Block> createTag(String nameSpace, String tag){

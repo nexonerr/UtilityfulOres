@@ -12,6 +12,10 @@
     "utilityfulores:spider_ore",
     "utilityfulores:deepslate_spider_ore",
     "utilityfulores:graceful_miner_ore",
-    "utilityfulores:deepslate_graceful_miner_ore"
+    "utilityfulores:deepslate_graceful_miner_ore",
+    "utilityfulores:sulfuric_ore",
+    "utilityfulores:deepslate_sulfuric_ore",
+    "utilityfulores:sharded_shulker_ore",
+    "utilityfulores:deepslate_sharded_shulker_ore"
   ]
 }

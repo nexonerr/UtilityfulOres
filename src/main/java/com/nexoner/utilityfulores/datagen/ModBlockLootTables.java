@@ -44,11 +44,19 @@ public class ModBlockLootTables extends BlockLoot {
         this.add(ModBlocks.SPIDER_ORE.STONE_VARIENT.get(), (block) -> createAmplifiedDustDrop(ModBlocks.SPIDER_ORE.STONE_VARIENT.get(), Items.STRING,Items.SPIDER_EYE));
         this.add(ModBlocks.SPIDER_ORE.DEEPSLATE_VARIENT.get(), (block) -> createAmplifiedDustDrop(ModBlocks.SPIDER_ORE.DEEPSLATE_VARIENT.get(), Items.STRING,Items.SPIDER_EYE));
 
+        this.add(ModBlocks.SULFURIC_ORE.STONE_VARIENT.get(), (block) -> createAmplifiedDustDrop(ModBlocks.SULFURIC_ORE.STONE_VARIENT.get(), ModItems.SULFUR_DUST.get(),Items.GUNPOWDER));
+        this.add(ModBlocks.SULFURIC_ORE.DEEPSLATE_VARIENT.get(), (block) -> createAmplifiedDustDrop(ModBlocks.SULFURIC_ORE.DEEPSLATE_VARIENT.get(), ModItems.SULFUR_DUST.get(),Items.GUNPOWDER));
+
+        this.add(ModBlocks.SHARDED_SKULKER_ORE.STONE_VARIENT.get(), (block) -> createOreDrop(ModBlocks.SHARDED_SKULKER_ORE.STONE_VARIENT.get(), ModItems.SHULKER_SHARD.get()));
+        this.add(ModBlocks.SHARDED_SKULKER_ORE.DEEPSLATE_VARIENT.get(), (block) -> createOreDrop(ModBlocks.SHARDED_SKULKER_ORE.DEEPSLATE_VARIENT.get(), ModItems.SHULKER_SHARD.get()));
+
         this.add(ModBlocks.GRACEFUL_MINER_ORE.STONE_VARIENT.get(), applyExplosionDecay(ModBlocks.GRACEFUL_MINER_ORE.STONE_VARIENT.get(), LootTable.lootTable()
                 .withPool(LootPool.lootPool().setRolls(UniformGenerator.between(1.0f,2.0f)).apply(ApplyBonusCount.addOreBonusCount(Enchantments.BLOCK_FORTUNE))
                         .add(LootItem.lootTableItem(Items.DIAMOND_PICKAXE).apply(new EnchantRandomlyFunction.Builder().withEnchantment(Enchantments.BLOCK_FORTUNE).withEnchantment(Enchantments.BLOCK_EFFICIENCY)).setWeight(1))
                         .add(LootItem.lootTableItem(Items.IRON_PICKAXE).apply(new EnchantRandomlyFunction.Builder().withEnchantment(Enchantments.BLOCK_FORTUNE).withEnchantment(Enchantments.BLOCK_EFFICIENCY)).setWeight(3))
-                        .add(LootItem.lootTableItem(Items.TORCH).apply(SetItemCountFunction.setCount(UniformGenerator.between(32f,64f))).setWeight(4)).when(HAS_NO_SILK_TOUCH)
+                        .add(LootItem.lootTableItem(Items.STONE_PICKAXE).apply(new EnchantRandomlyFunction.Builder().withEnchantment(Enchantments.BLOCK_FORTUNE).withEnchantment(Enchantments.BLOCK_EFFICIENCY)).setWeight(5))
+                        .add(LootItem.lootTableItem(Items.OBSIDIAN).apply(SetItemCountFunction.setCount(UniformGenerator.between(2f,10f))).setWeight(5))
+                        .add(LootItem.lootTableItem(Items.TORCH).apply(SetItemCountFunction.setCount(UniformGenerator.between(32f,64f))).setWeight(6)).when(HAS_NO_SILK_TOUCH)
                 )
                 .withPool(LootPool.lootPool().add(LootItem.lootTableItem(ModBlocks.GRACEFUL_MINER_ORE.STONE_VARIENT.get())).when(HAS_SILK_TOUCH))
         ));
@@ -57,7 +65,9 @@ public class ModBlockLootTables extends BlockLoot {
                 .withPool(LootPool.lootPool().setRolls(UniformGenerator.between(1.0f,2.0f)).apply(ApplyBonusCount.addOreBonusCount(Enchantments.BLOCK_FORTUNE))
                         .add(LootItem.lootTableItem(Items.DIAMOND_PICKAXE).apply(new EnchantRandomlyFunction.Builder().withEnchantment(Enchantments.BLOCK_FORTUNE).withEnchantment(Enchantments.BLOCK_EFFICIENCY)).setWeight(1))
                         .add(LootItem.lootTableItem(Items.IRON_PICKAXE).apply(new EnchantRandomlyFunction.Builder().withEnchantment(Enchantments.BLOCK_FORTUNE).withEnchantment(Enchantments.BLOCK_EFFICIENCY)).setWeight(3))
-                        .add(LootItem.lootTableItem(Items.TORCH).apply(SetItemCountFunction.setCount(UniformGenerator.between(32f,64f))).setWeight(4)).when(HAS_NO_SILK_TOUCH)
+                        .add(LootItem.lootTableItem(Items.STONE_PICKAXE).apply(new EnchantRandomlyFunction.Builder().withEnchantment(Enchantments.BLOCK_FORTUNE).withEnchantment(Enchantments.BLOCK_EFFICIENCY)).setWeight(5))
+                        .add(LootItem.lootTableItem(Items.OBSIDIAN).apply(SetItemCountFunction.setCount(UniformGenerator.between(2f,10f))).setWeight(5))
+                        .add(LootItem.lootTableItem(Items.TORCH).apply(SetItemCountFunction.setCount(UniformGenerator.between(32f,64f))).setWeight(6)).when(HAS_NO_SILK_TOUCH)
                 )
                 .withPool(LootPool.lootPool().add(LootItem.lootTableItem(ModBlocks.GRACEFUL_MINER_ORE.DEEPSLATE_VARIENT.get())).when(HAS_SILK_TOUCH))
         ));

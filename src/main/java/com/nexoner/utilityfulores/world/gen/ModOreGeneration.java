@@ -1,5 +1,6 @@
 package com.nexoner.utilityfulores.world.gen;
 
+import com.nexoner.utilityfulores.config.StandardOreConfig;
 import com.nexoner.utilityfulores.config.WorldGenConfig;
 import net.minecraft.core.Holder;
 import net.minecraft.world.level.levelgen.GenerationStep;
@@ -15,12 +16,20 @@ public class ModOreGeneration {
 
         if (!WorldGenConfig.GENERATE_ORES.get()) return;
 
-        base.add(ConfiguredPlacedFeatures.ENDER_ORE.PLACED);
-        base.add(ConfiguredPlacedFeatures.BLAZE_ORE.PLACED);
-        base.add(ConfiguredPlacedFeatures.SLIME_ORE.PLACED);
-        base.add(ConfiguredPlacedFeatures.BONESTRUCK_ORE.PLACED);
-        base.add(ConfiguredPlacedFeatures.SPIDER_ORE.PLACED);
-        base.add(ConfiguredPlacedFeatures.GRACEFUL_MINER_ORE.PLACED);
+        addWithDependency(ConfiguredPlacedFeatures.ENDER_ORE,base);
+        addWithDependency(ConfiguredPlacedFeatures.BLAZE_ORE,base);
+        addWithDependency(ConfiguredPlacedFeatures.SLIME_ORE,base);
+        addWithDependency(ConfiguredPlacedFeatures.BONESTRUCK_ORE,base);
+        addWithDependency(ConfiguredPlacedFeatures.SPIDER_ORE,base);
+        addWithDependency(ConfiguredPlacedFeatures.GRACEFUL_MINER_ORE,base);
+        addWithDependency(ConfiguredPlacedFeatures.SULFURIC_ORE,base);
+        addWithDependency(ConfiguredPlacedFeatures.SHARDED_SHULKER_ORE,base);
 
+    }
+
+    private static void addWithDependency(BundledConfiguredPlacedFeature configuredPlacedFeature, List<Holder<PlacedFeature>> base){
+        if (WorldGenConfig.INVERTED_MODE.get() != configuredPlacedFeature.GENERATE){
+            base.add(configuredPlacedFeature.PLACED);
+        }
     }
 }

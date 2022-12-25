@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "group": "utilityfulores_compacting",
+  "ingredients": [
+    {
+      "item": "utilityfulores:sulfur_dust"
+    },
+    {
+      "item": "utilityfulores:sulfur_dust"
+    },
+    {
+      "item": "utilityfulores:sulfur_dust"
+    }
+  ],
+  "result": {
+    "item": "minecraft:gunpowder"
+  }
+}

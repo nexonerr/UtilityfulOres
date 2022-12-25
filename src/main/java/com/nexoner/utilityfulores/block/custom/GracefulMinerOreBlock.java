@@ -1,5 +1,6 @@
 package com.nexoner.utilityfulores.block.custom;
 
+import com.nexoner.utilityfulores.config.BlockPropertyConfig;
 import com.nexoner.utilityfulores.sound.ModSounds;
 import net.minecraft.core.BlockPos;
 import net.minecraft.sounds.SoundSource;
@@ -22,7 +23,7 @@ public class GracefulMinerOreBlock extends OreBlock {
     public boolean onDestroyedByPlayer(BlockState state, Level level, BlockPos pos, Player player, boolean willHarvest, FluidState fluid) {
 
         if (!level.isClientSide) {
-            player.addEffect(new MobEffectInstance(MobEffects.DIG_SPEED, (int) (Math.random() * 20 * 300), 0));
+            player.addEffect(new MobEffectInstance(MobEffects.DIG_SPEED, (int) (Math.random() * 20 * BlockPropertyConfig.GRACEFUL_MINER_HASTE_TIME.get()), 0));
         } else {
             level.playSound(player, player.getOnPos(), ModSounds.MINER_GRACE_BREAK.get(), SoundSource.BLOCKS, 1f, 1f);
         }

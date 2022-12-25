@@ -26,6 +26,8 @@ public class ModLanguageProvider extends LanguageProvider {
 
     private void Items(){
         add(ModItems.ENDER_SHARD.get(),"Ender Shard");
+        add(ModItems.SULFUR_DUST.get(),"Sulfur Dust");
+        add(ModItems.SHULKER_SHARD.get(),"Shulker Shard");
     }
 
     private void Blocks(){
@@ -35,6 +37,8 @@ public class ModLanguageProvider extends LanguageProvider {
         translateStoneVarientedOre(ModBlocks.BONESTRUCK_ORE, "Bonestruck Ore");
         translateStoneVarientedOre(ModBlocks.SPIDER_ORE, "Spider Ore");
         translateStoneVarientedOre(ModBlocks.GRACEFUL_MINER_ORE, "Graceful Miner's Ore");
+        translateStoneVarientedOre(ModBlocks.SULFURIC_ORE, "Sulfuric Ore");
+        translateStoneVarientedOre(ModBlocks.SHARDED_SKULKER_ORE, "Sharded Shulker Ore");
     }
 
     private void addCreativeModeTab(CreativeModeTab key, String translation){

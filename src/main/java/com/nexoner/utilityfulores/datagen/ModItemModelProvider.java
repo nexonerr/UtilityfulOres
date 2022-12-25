@@ -25,6 +25,8 @@ public class ModItemModelProvider extends ItemModelProvider {
 
     private void registerItems(){
         simpleItem(ModItems.ENDER_SHARD.get());
+        simpleItem(ModItems.SULFUR_DUST.get());
+        simpleItem(ModItems.SHULKER_SHARD.get());
     }
 
     private void registerBlockItems(){
@@ -34,6 +36,8 @@ public class ModItemModelProvider extends ItemModelProvider {
         stoneVarientedOreBlockItem(ModBlocks.BONESTRUCK_ORE);
         stoneVarientedOreBlockItem(ModBlocks.SPIDER_ORE);
         stoneVarientedOreBlockItem(ModBlocks.GRACEFUL_MINER_ORE);
+        stoneVarientedOreBlockItem(ModBlocks.SULFURIC_ORE);
+        stoneVarientedOreBlockItem(ModBlocks.SHARDED_SKULKER_ORE);
     }
 
     private ItemModelBuilder simpleItem(Item item) {

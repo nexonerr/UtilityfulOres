@@ -20,13 +20,16 @@ public class BundledConfiguredPlacedFeature {
     public final Holder<ConfiguredFeature<OreConfiguration, ?>> CONFIGURED;
     public final Holder<PlacedFeature> PLACED;
 
-    public BundledConfiguredPlacedFeature(String id, List<OreConfiguration.TargetBlockState> targetBlocks, int veinSize, List<PlacementModifier> placementModifier) {
+    public final boolean GENERATE;
+
+    public BundledConfiguredPlacedFeature(String id, List<OreConfiguration.TargetBlockState> targetBlocks, int veinSize, List<PlacementModifier> placementModifier, boolean generate) {
         this.CONFIGURED = FeatureUtils.register(id,
                 Feature.ORE, new OreConfiguration(targetBlocks, veinSize));
         this.PLACED = PlacementUtils.register(id + "_placed",
                 CONFIGURED, placementModifier);
+        this.GENERATE = generate;
     }
-    public BundledConfiguredPlacedFeature(String id, List<OreConfiguration.TargetBlockState> targetBlocks, int veinSize, boolean isRare, int maxSpawn, int minSpawn, int spawnRate) {
+    public BundledConfiguredPlacedFeature(String id, List<OreConfiguration.TargetBlockState> targetBlocks, int veinSize, boolean isRare, int maxSpawn, int minSpawn, int spawnRate, boolean generate) {
         this.CONFIGURED = FeatureUtils.register(id,
                 Feature.ORE, new OreConfiguration(targetBlocks, veinSize));
         if (!isRare) {
@@ -38,9 +41,10 @@ public class BundledConfiguredPlacedFeature {
                     CONFIGURED, rareOrePlacement(spawnRate, // Every x chunks
                             HeightRangePlacement.triangle(VerticalAnchor.absolute(minSpawn), VerticalAnchor.absolute(maxSpawn))));
         }
+        this.GENERATE = generate;
     }
     public BundledConfiguredPlacedFeature(StandardOreConfig oreConfig,List<OreConfiguration.TargetBlockState> targetBlocks){
-         this(oreConfig.id,targetBlocks,oreConfig.VEIN_SIZE.get(),oreConfig.IS_RARE.get(),oreConfig.SPAWN_MAX.get(),oreConfig.SPAWN_MIN.get(),oreConfig.SPAWN_RATE.get());
+         this(oreConfig.id,targetBlocks,oreConfig.VEIN_SIZE.get(),oreConfig.IS_RARE.get(),oreConfig.SPAWN_MAX.get(),oreConfig.SPAWN_MIN.get(),oreConfig.SPAWN_RATE.get(),oreConfig.GENERATE.get());
     }
 
     public static List<PlacementModifier> orePlacement(PlacementModifier p_195347_, PlacementModifier p_195348_) {

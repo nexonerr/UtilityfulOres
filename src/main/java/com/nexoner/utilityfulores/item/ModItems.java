@@ -15,6 +15,12 @@ public class ModItems {
         public static final RegistryObject<Item> ENDER_SHARD = ITEMS.register("ender_shard",
                 () -> new Item(new Item.Properties().tab(ModCreativeModeTab.ORES_TAB)));
 
+        public static final RegistryObject<Item> SULFUR_DUST = ITEMS.register("sulfur_dust",
+                () -> new Item(new Item.Properties().tab(ModCreativeModeTab.ORES_TAB)));
+
+    public static final RegistryObject<Item> SHULKER_SHARD = ITEMS.register("shulker_shard",
+            () -> new Item(new Item.Properties().tab(ModCreativeModeTab.ORES_TAB)));
+
 
         public static void register(IEventBus eventBus) {
             ITEMS.register(eventBus);
