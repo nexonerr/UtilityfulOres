@@ -17,4 +17,10 @@ https://modrinth.com/mod/utilityful_ores
 
 # Setup
 
-In order to use the mod, you will need to have the [Forge mod loader](https://files.minecraftforge.net/net/minecraftforge/forge/index_1.18.2.html) installed, afterwards, you can install it just like any other mod
+In order to use the mod, you will need to have the [Forge mod loader](https://files.minecraftforge.net/net/minecraftforge/forge/index_1.18.2.html) installed, afterwards, you can install it just like any other mod  
+
+***
+
+#Support  
+
+Feel free to create an [issue](https://github.com/nexonerr/UtilityfulOres/issues) regarding your problem with the mod, or contact me towards any means necessary
