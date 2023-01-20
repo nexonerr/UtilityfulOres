@@ -1,6 +1,5 @@
 package com.nexoner.utilityfulores.world.gen;
 
-import com.nexoner.utilityfulores.config.StandardOreConfig;
 import com.nexoner.utilityfulores.config.WorldGenConfig;
 import net.minecraft.core.Holder;
 import net.minecraft.world.level.levelgen.GenerationStep;

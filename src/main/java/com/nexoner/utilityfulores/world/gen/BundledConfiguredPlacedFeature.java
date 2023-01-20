@@ -1,6 +1,5 @@
 package com.nexoner.utilityfulores.world.gen;
 
-import com.nexoner.utilityfulores.block.util.StoneVarientedOre;
 import com.nexoner.utilityfulores.config.StandardOreConfig;
 import net.minecraft.core.Holder;
 import net.minecraft.data.worldgen.features.FeatureUtils;

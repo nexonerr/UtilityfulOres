@@ -3,7 +3,6 @@ package com.nexoner.utilityfulores.block.util;
 import com.nexoner.utilityfulores.block.ModBlocks;
 import com.nexoner.utilityfulores.creative_tab.ModCreativeModeTab;
 import net.minecraft.util.valueproviders.UniformInt;
-import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.OreBlock;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.material.Material;

@@ -2,7 +2,6 @@ package com.nexoner.utilityfulores.datagen;
 
 import com.nexoner.utilityfulores.block.ModBlocks;
 import com.nexoner.utilityfulores.item.ModItems;
-import com.nexoner.utilityfulores.sound.ModSounds;
 import net.minecraft.advancements.critereon.EnchantmentPredicate;
 import net.minecraft.advancements.critereon.ItemPredicate;
 import net.minecraft.advancements.critereon.MinMaxBounds;
