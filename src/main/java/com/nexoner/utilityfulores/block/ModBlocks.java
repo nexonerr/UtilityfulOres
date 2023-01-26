@@ -36,6 +36,8 @@ public class ModBlocks {
 
     public static final StoneVarientedOre SHARDED_SKULKER_ORE = new StoneVarientedOre("sharded_shulker_ore",3,6);
 
+    public static final StoneVarientedOre GARDENED_ORE = new StoneVarientedOre("gardened_ore",2,4);
+
     public static final StoneVarientedOre GRACEFUL_MINER_ORE = new StoneVarientedOre(
             ModBlocks.registerBlock("graceful_miner_ore", () -> new GracefulMinerOreBlock(BlockBehaviour.Properties.of(Material.STONE).strength(3f).requiresCorrectToolForDrops()), ModCreativeModeTab.ORES_TAB),
             ModBlocks.registerBlock("deepslate_graceful_miner_ore", () -> new GracefulMinerOreBlock(BlockBehaviour.Properties.of(Material.STONE).strength(4f).requiresCorrectToolForDrops()), ModCreativeModeTab.ORES_TAB)

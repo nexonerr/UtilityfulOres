@@ -71,6 +71,28 @@ public class ModBlockLootTables extends BlockLoot {
                 .withPool(LootPool.lootPool().add(LootItem.lootTableItem(ModBlocks.GRACEFUL_MINER_ORE.DEEPSLATE_VARIENT.get())).when(HAS_SILK_TOUCH))
         ));
 
+        this.add(ModBlocks.GARDENED_ORE.STONE_VARIENT.get(), applyExplosionDecay(ModBlocks.GARDENED_ORE.STONE_VARIENT.get(), LootTable.lootTable()
+                .withPool(LootPool.lootPool().setRolls(UniformGenerator.between(1.0f,4.0f)).apply(ApplyBonusCount.addOreBonusCount(Enchantments.BLOCK_FORTUNE))
+                        .add(LootItem.lootTableItem(Items.OAK_SAPLING).apply(SetItemCountFunction.setCount(UniformGenerator.between(3f,12f))).setWeight(1))
+                        .add(LootItem.lootTableItem(Items.PUMPKIN_SEEDS).apply(SetItemCountFunction.setCount(UniformGenerator.between(1f,4f))).setWeight(2))
+                        .add(LootItem.lootTableItem(Items.MELON).apply(SetItemCountFunction.setCount(UniformGenerator.between(5f,15f))).setWeight(2))
+                        .add(LootItem.lootTableItem(Items.OAK_LOG).apply(SetItemCountFunction.setCount(UniformGenerator.between(10f,20f))).setWeight(3))
+                        .add(LootItem.lootTableItem(Items.MOSS_BLOCK).apply(SetItemCountFunction.setCount(UniformGenerator.between(3f,12f))).setWeight(1)).when(HAS_NO_SILK_TOUCH)
+                )
+                .withPool(LootPool.lootPool().add(LootItem.lootTableItem(ModBlocks.GARDENED_ORE.STONE_VARIENT.get())).when(HAS_SILK_TOUCH))
+        ));
+
+        this.add(ModBlocks.GARDENED_ORE.DEEPSLATE_VARIENT.get(), applyExplosionDecay(ModBlocks.GARDENED_ORE.DEEPSLATE_VARIENT.get(), LootTable.lootTable()
+                .withPool(LootPool.lootPool().setRolls(UniformGenerator.between(1.0f,4.0f)).apply(ApplyBonusCount.addOreBonusCount(Enchantments.BLOCK_FORTUNE))
+                        .add(LootItem.lootTableItem(Items.OAK_SAPLING).apply(SetItemCountFunction.setCount(UniformGenerator.between(3f,12f))).setWeight(1))
+                        .add(LootItem.lootTableItem(Items.PUMPKIN_SEEDS).apply(SetItemCountFunction.setCount(UniformGenerator.between(1f,4f))).setWeight(2))
+                        .add(LootItem.lootTableItem(Items.MELON).apply(SetItemCountFunction.setCount(UniformGenerator.between(5f,15f))).setWeight(2))
+                        .add(LootItem.lootTableItem(Items.OAK_LOG).apply(SetItemCountFunction.setCount(UniformGenerator.between(10f,20f))).setWeight(3))
+                        .add(LootItem.lootTableItem(Items.MOSS_BLOCK).apply(SetItemCountFunction.setCount(UniformGenerator.between(3f,12f))).setWeight(1)).when(HAS_NO_SILK_TOUCH)
+                )
+                .withPool(LootPool.lootPool().add(LootItem.lootTableItem(ModBlocks.GARDENED_ORE.DEEPSLATE_VARIENT.get())).when(HAS_SILK_TOUCH))
+        ));
+
     }
 
     @Override

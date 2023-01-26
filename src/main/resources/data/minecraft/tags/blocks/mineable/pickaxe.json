@@ -16,6 +16,8 @@
     "utilityfulores:sulfuric_ore",
     "utilityfulores:deepslate_sulfuric_ore",
     "utilityfulores:sharded_shulker_ore",
-    "utilityfulores:deepslate_sharded_shulker_ore"
+    "utilityfulores:deepslate_sharded_shulker_ore",
+    "utilityfulores:gardened_ore",
+    "utilityfulores:deepslate_gardened_ore"
   ]
 }

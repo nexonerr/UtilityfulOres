@@ -57,7 +57,8 @@ public class ModBlockTagProvider extends BlockTagsProvider {
                 ModBlocks.SPIDER_ORE,
                 ModBlocks.GRACEFUL_MINER_ORE,
                 ModBlocks.SULFURIC_ORE,
-                ModBlocks.SHARDED_SKULKER_ORE
+                ModBlocks.SHARDED_SKULKER_ORE,
+                ModBlocks.GARDENED_ORE
         );
         for (Block block: standardOres) {
             tag(BlockTags.MINEABLE_WITH_PICKAXE).add(block);

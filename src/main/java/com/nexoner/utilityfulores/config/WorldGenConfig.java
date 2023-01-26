@@ -17,6 +17,7 @@ public class WorldGenConfig {
     public static final StandardOreConfig GRACEFUL_MINER_ORE_CONFIG;
     public static final StandardOreConfig SULFURIC_ORE_CONFIG;
     public static final StandardOreConfig SHARDED_SHULKER_ORE_CONFIG;
+    public static final StandardOreConfig GARDENED_ORE_CONFIG;
 
 
 
@@ -35,6 +36,7 @@ public class WorldGenConfig {
         GRACEFUL_MINER_ORE_CONFIG = new StandardOreConfig(3,2,-45,15,false,BUILDER,"graceful_miner_ore");
         SULFURIC_ORE_CONFIG = new StandardOreConfig(15,4,-20,35,false,BUILDER,"sulfuric_ore");
         SHARDED_SHULKER_ORE_CONFIG = new StandardOreConfig(3,2,-50,30,false,BUILDER,"sharded_shulker_ore");
+        GARDENED_ORE_CONFIG = new StandardOreConfig(5,10,-15,60,false,BUILDER,"gardened_ore");
 
         BUILDER.pop();
         SPEC = BUILDER.build();
