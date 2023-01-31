@@ -21,6 +21,6 @@ In order to use the mod, you will need to have the [Forge mod loader](https://fi
 
 ***
 
-#Support  
+# Support  
 
 Feel free to create an [issue](https://github.com/nexonerr/UtilityfulOres/issues) regarding your problem with the mod, or contact me towards any means necessary
