@@ -23,6 +23,7 @@ public class ModBlockStateProvider extends BlockStateProvider {
         registerStoneVarientedOreModels(ModBlocks.SULFURIC_ORE);
         registerStoneVarientedOreModels(ModBlocks.SHARDED_SKULKER_ORE);
         registerStoneVarientedOreModels(ModBlocks.GARDENED_ORE);
+        registerStoneVarientedOreModels(ModBlocks.UNSTABLE_SULFURIC_ORE);
     }
 
     private void registerStoneVarientedOreModels(StoneVarientedOre stoneVarientedOre){

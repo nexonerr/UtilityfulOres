@@ -41,6 +41,7 @@ public class ModBlockTagProvider extends BlockTagsProvider {
         tagStoneVarientedOre(ModBlocks.SPIDER_ORE,ORE_SPIDER);
         tagStoneVarientedOre(ModBlocks.SULFURIC_ORE,ORE_SULFUR);
         tagStoneVarientedOre(ModBlocks.SHARDED_SKULKER_ORE,ORE_SHULKER);
+        tagStoneVarientedOre(ModBlocks.UNSTABLE_SULFURIC_ORE,ORE_SULFUR);
         tagStandardOres();
     }
 
@@ -58,7 +59,8 @@ public class ModBlockTagProvider extends BlockTagsProvider {
                 ModBlocks.GRACEFUL_MINER_ORE,
                 ModBlocks.SULFURIC_ORE,
                 ModBlocks.SHARDED_SKULKER_ORE,
-                ModBlocks.GARDENED_ORE
+                ModBlocks.GARDENED_ORE,
+                ModBlocks.UNSTABLE_SULFURIC_ORE
         );
         for (Block block: standardOres) {
             tag(BlockTags.MINEABLE_WITH_PICKAXE).add(block);

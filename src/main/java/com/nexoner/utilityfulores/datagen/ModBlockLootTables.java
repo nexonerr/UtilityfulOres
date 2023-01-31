@@ -46,6 +46,9 @@ public class ModBlockLootTables extends BlockLoot {
         this.add(ModBlocks.SULFURIC_ORE.STONE_VARIENT.get(), (block) -> createAmplifiedDustDrop(ModBlocks.SULFURIC_ORE.STONE_VARIENT.get(), ModItems.SULFUR_DUST.get(),Items.GUNPOWDER));
         this.add(ModBlocks.SULFURIC_ORE.DEEPSLATE_VARIENT.get(), (block) -> createAmplifiedDustDrop(ModBlocks.SULFURIC_ORE.DEEPSLATE_VARIENT.get(), ModItems.SULFUR_DUST.get(),Items.GUNPOWDER));
 
+        this.add(ModBlocks.UNSTABLE_SULFURIC_ORE.STONE_VARIENT.get(), (block) -> createAmplifiedDustDrop(ModBlocks.UNSTABLE_SULFURIC_ORE.STONE_VARIENT.get(), ModItems.SULFUR_DUST.get(),Items.GUNPOWDER));
+        this.add(ModBlocks.UNSTABLE_SULFURIC_ORE.DEEPSLATE_VARIENT.get(), (block) -> createAmplifiedDustDrop(ModBlocks.UNSTABLE_SULFURIC_ORE.DEEPSLATE_VARIENT.get(), ModItems.SULFUR_DUST.get(),Items.GUNPOWDER));
+
         this.add(ModBlocks.SHARDED_SKULKER_ORE.STONE_VARIENT.get(), (block) -> createOreDrop(ModBlocks.SHARDED_SKULKER_ORE.STONE_VARIENT.get(), ModItems.SHULKER_SHARD.get()));
         this.add(ModBlocks.SHARDED_SKULKER_ORE.DEEPSLATE_VARIENT.get(), (block) -> createOreDrop(ModBlocks.SHARDED_SKULKER_ORE.DEEPSLATE_VARIENT.get(), ModItems.SHULKER_SHARD.get()));
 

@@ -2,7 +2,8 @@
 
 ##Additions  
 
--Added Gardened Ore, which drops "natura items", e.g. logs
+-Added Gardened Ore, which drops "nature items", e.g. logs  
+-Added Unstable Sulfuric Ore, a dangerous variant of the sulfuric ore, beware when stepping on it!
 
 ##Fixes  
 

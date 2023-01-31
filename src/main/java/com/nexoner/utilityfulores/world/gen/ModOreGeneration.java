@@ -24,6 +24,7 @@ public class ModOreGeneration {
         addWithDependency(ConfiguredPlacedFeatures.SULFURIC_ORE,base);
         addWithDependency(ConfiguredPlacedFeatures.SHARDED_SHULKER_ORE,base);
         addWithDependency(ConfiguredPlacedFeatures.GARDENED_ORE,base);
+        addWithDependency(ConfiguredPlacedFeatures.UNSTABLE_SULFURIC_ORE,base);
 
     }
 

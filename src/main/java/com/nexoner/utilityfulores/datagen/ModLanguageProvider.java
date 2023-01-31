@@ -40,6 +40,7 @@ public class ModLanguageProvider extends LanguageProvider {
         translateStoneVarientedOre(ModBlocks.SULFURIC_ORE, "Sulfuric Ore");
         translateStoneVarientedOre(ModBlocks.SHARDED_SKULKER_ORE, "Sharded Shulker Ore");
         translateStoneVarientedOre(ModBlocks.GARDENED_ORE, "Gardened Ore");
+        translateStoneVarientedOre(ModBlocks.UNSTABLE_SULFURIC_ORE, "Unstable Sulfuric Ore");
     }
 
     private void addCreativeModeTab(CreativeModeTab key, String translation){
