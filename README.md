@@ -1,5 +1,5 @@
 
-# Utilityful Ores [![](http://cf.way2muchnoise.eu/779971.svg)](https://www.curseforge.com/minecraft/mc-mods/utilityful-ores) [![](http://cf.way2muchnoise.eu/versions/779971.svg)](https://www.curseforge.com/minecraft/mc-mods/utilityful-ores) [![](http://modrinth-utils.vercel.app/api/badge/downloads?id=H3FbNL3b&logo=true)](https://modrinth.com/mod/utilityful_ores) [![](http://modrinth-utils.vercel.app/api/badge/versions?id=H3FbNL3b&logo=true)](https://modrinth.com/mod/utilityful_ores)
+# Utilityful Ores [![](https://cf.way2muchnoise.eu/779971.svg)](https://www.curseforge.com/minecraft/mc-mods/utilityful-ores) [![](http://cf.way2muchnoise.eu/versions/779971.svg)](https://www.curseforge.com/minecraft/mc-mods/utilityful-ores)
 
 Utilityful Ores is a simple mod for Minecraft that aims to  add ores for resources that usually don't have one and some **extra fun ones**.  
 <br>
